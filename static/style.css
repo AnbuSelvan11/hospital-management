@@ -1,0 +1,21 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #f2f7f7; color: #1d3b3a; }
+
+.top { background: #1d3b3a; color: white; padding: 15px 30px; }
+.top h1 { margin: 0 0 10px 0; font-size: 22px; }
+.menu a { color: white; margin-right: 20px; text-decoration: none; }
+.menu a:hover { text-decoration: underline; }
+
+.content { padding: 20px 30px; }
+
+form { background: white; padding: 15px; border: 1px solid #cfdede; margin-bottom: 20px; }
+input, select { padding: 8px; margin: 5px; border: 1px solid #aabdbd; }
+button { padding: 8px 16px; background: #0e7c7b; color: white; border: none; cursor: pointer; }
+
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { padding: 10px; border: 1px solid #cfdede; text-align: left; }
+th { background: #dcebea; }
+.del { color: #b3392f; text-decoration: none; }
+
+.boxes { display: flex; gap: 20px; }
+.box { background: white; border: 1px solid #cfdede; padding: 20px 40px; text-align: center; }
+.box h3 { font-size: 36px; margin: 0; color: #0e7c7b; }

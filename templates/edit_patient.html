@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Patient</h2>
+
+<form method="POST">
+    <input type="text" name="name" value="{{ p.name }}" required>
+    <input type="number" name="age" value="{{ p.age }}" required>
+    <select name="gender">
+        <option {% if p.gender == 'Male' %}selected{% endif %}>Male</option>
+        <option {% if p.gender == 'Female' %}selected{% endif %}>Female</option>
+        <option {% if p.gender == 'Other' %}selected{% endif %}>Other</option>
+    </select>
+    <input type="text" name="phone" value="{{ p.phone }}" required>
+    <input type="text" name="disease" value="{{ p.disease }}" required>
+    <button type="submit">Save Changes</button>
+</form>
+{% endblock %}

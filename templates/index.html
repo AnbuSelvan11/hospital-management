@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+<div class="boxes">
+    <div class="box"><h3>{{ total_patients }}</h3><p>Patients</p></div>
+    <div class="box"><h3>{{ total_doctors }}</h3><p>Doctors</p></div>
+    <div class="box"><h3>{{ total_appointments }}</h3><p>Appointments</p></div>
+</div>
+{% endblock %}

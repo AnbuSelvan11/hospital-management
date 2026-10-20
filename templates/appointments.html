@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Appointments</h2>
+
+<form method="POST">
+    <select name="patient" required>
+        <option value="">Select patient</option>
+        {% for p in all_patients %}
+        <option>{{ p.name }}</option>
+        {% endfor %}
+    </select>
+    <select name="doctor" required>
+        <option value="">Select doctor</option>
+        {% for d in all_doctors %}
+        <option>{{ d.name }}</option>
+        {% endfor %}
+    </select>
+    <input type="date" name="date" required>
+    <input type="text" name="reason" placeholder="Reason" required>
+    <button type="submit">Book Appointment</button>
+</form>
+
+<table>
+    <tr><th>Patient</th><th>Doctor</th><th>Date</th><th>Reason</th><th>Action</th></tr>
+    {% for a in all_appointments %}
+    <tr>
+        <td>{{ a.patient }}</td>
+        <td>{{ a.doctor }}</td>
+        <td>{{ a.date }}</td>
+        <td>{{ a.reason }}</td>
+        <td><a class="del" href="/appointments/delete/{{ a._id }}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
